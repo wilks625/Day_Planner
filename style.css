@@ -33,6 +33,7 @@ table {
 
 .description {
   white-space: pre-wrap;
+  background-color: transparent; /* added transparents to allow colors to show thorugh */
 }
 
 .time-block {
