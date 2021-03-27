@@ -85,8 +85,7 @@ table {
   transition: all 0.3s ease-in-out;
 }
 
-/* added stuff */
-/* .fa-save {
-
-}  */
-
+.form-group { 
+  margin-bottom: 0px;
+  height: 70px;
+}
