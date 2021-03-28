@@ -11,7 +11,7 @@ function displayTime() {
 setInterval(displayTime, 1000);
 renderMessege();
 
-//color corresponding to current time
+//color of current time will display as red, time in the past will display as grey, and time in the future will display as green
 $(".time-block").each(function() {
 
   var hour = parseInt($(this).data().number);
@@ -19,7 +19,7 @@ $(".time-block").each(function() {
 
     if(currentTime > hour){
       $(this).addClass("past")
-      // console.log("seth, whats up?");
+      // console.log("seth, whats up?"); //used for testing functions
     } else if (currentTime < hour) {
       $(this).addClass("future");
     } else {
@@ -29,18 +29,18 @@ $(".time-block").each(function() {
 });
 
 //testing below
-function renderMessege() { //this function allows for saved events to remain, even after the page has been refreshed
+function renderMessege() { 
   console.log("testing")
-  var userInput = localStorage.getItem("inputField")
+  var userInput = localStorage.getItem("inputField") //retrieves local storage from inputField
   
-  userTextInput.textContent = userInput;
+  userTextInput.textContent = userInput; //changes text from globally scoped variable userTextInput to whatever was stored in the local storage.
   
 }
 //testing above
 //testing local storage part 2 below
 
 
-
+// `
 $(".saveBtn").on("click", function (event) {
   console.log($(this).siblings(".description")[0].value);
   event.preventDefault();
@@ -51,19 +51,19 @@ $(".saveBtn").on("click", function (event) {
   // $("#hour-13 .description").val(localStorage.getItem("hour-13"));
 });
 
-saveBtn.addEventListener("click", function (event) {
+//function that listens for a mouse click on the save button to the right of the text input area
+saveBtn.addEventListener("click", function (event) { 
   event.preventDefault();
   console.log("hello");
   var inputField = document.getElementById("inputField").value;
   console.log(inputField);
 
-  if (inputField === "") {
+  if (inputField === "") { //console logs if the input field was 
     console.log("error");
   } else {
     console.log("success");
 
-    localStorage.setItem("inputField", inputField);
-   
+    localStorage.setItem("inputField", inputField); //stores input from inputField text area to inputField variable to be stored in local storage
   }
 });
 
