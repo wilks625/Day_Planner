@@ -2,7 +2,6 @@ let timeDisplayEl = $("#time-display");
 let saveBtn = document.getElementById("btn");
 let userTextInput = document.querySelector("#inputField");
 
-
 //this function displays the current time and date in the header of the application
 function displayTime() { 
   var rightNow = moment().format("MMMM DD, YYYY [|] hh:mm:ss a");
@@ -28,7 +27,6 @@ $(".time-block").each(function() {
     // console.log("are you working?", (this))
 });
 
-//testing below
 function renderMessege() { 
   console.log("testing")
   var userInput = localStorage.getItem("inputField") //retrieves local storage from inputField
@@ -36,11 +34,9 @@ function renderMessege() {
   userTextInput.textContent = userInput; //changes text from globally scoped variable userTextInput to whatever was stored in the local storage.
   
 }
-//testing above
-//testing local storage part 2 below
 
 
-// `
+// used for testing
 $(".saveBtn").on("click", function (event) {
   console.log($(this).siblings(".description")[0].value);
   event.preventDefault();
@@ -66,8 +62,6 @@ saveBtn.addEventListener("click", function (event) {
     localStorage.setItem("inputField", inputField); //stores input from inputField text area to inputField variable to be stored in local storage
   }
 });
-
-
 
 // for(i=9; i<18; i++) {
 //   $("hour-"+i+" .description").val(localStorage.getItem("hour-"+i));
