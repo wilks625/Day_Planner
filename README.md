@@ -9,3 +9,5 @@ When the user scrolls down, they are presented with timeblocks for standard busi
 When the timeblock is clicked, the user may enter a event and then press the save button for that timeblock, which will be stored in local storage.
 
 When the text for that event is saved in local storage, the saved events persist, even after refreshing the webpage.
+
+![Screen Shot 2021-03-27 at 9 26 40 PM](https://user-images.githubusercontent.com/76915726/112739558-303fcb00-8f43-11eb-93a0-deff7b45fc0f.png)
